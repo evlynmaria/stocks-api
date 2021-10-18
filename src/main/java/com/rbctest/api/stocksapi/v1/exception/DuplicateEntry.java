@@ -1,21 +1,14 @@
-/**
- * 
- */
 package com.rbctest.api.stocksapi.v1.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-/**
- * 
- *
- */
-@ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class ResourceNotFound extends RuntimeException {
+@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+public class DuplicateEntry extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
-	public ResourceNotFound(String message) {
+	public DuplicateEntry(String message) {
 		super(message);
 	}
 }
