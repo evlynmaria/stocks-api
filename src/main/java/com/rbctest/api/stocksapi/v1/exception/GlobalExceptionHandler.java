@@ -3,6 +3,7 @@
  */
 package com.rbctest.api.stocksapi.v1.exception;
 
+import java.text.ParseException;
 import java.util.Date;
 
 import org.springframework.http.HttpStatus;
@@ -32,6 +33,12 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<Object> globalExceptionHandling(Exception exception, WebRequest request) {
 		ErrorInfo error = new ErrorInfo(new Date(), exception.getMessage(), request.getDescription(false));
+		return new ResponseEntity<Object>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@ExceptionHandler(ParseException.class)
+	public ResponseEntity<Object> globalExceptionHandling(ParseException exception, WebRequest request) {
+		ErrorInfo error = new ErrorInfo(new Date(), "Date format must be dd/mm/yyyy", request.getDescription(false));
 		return new ResponseEntity<Object>(error, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
