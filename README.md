@@ -16,11 +16,27 @@ An API to load stock info and retrive stock information . The app is inspired fr
 
 ## Application Setup
 
-- Using Docker
+- git clone , import the app and run locally
+
+- using Docker 
+  ```
+  mvn clean install
+  docker build . -t harisree06/stocksapi
+  docker run -p 8080:8080 harisree06/stocksapi
+  ```
+- From Docker hub (might be broken) 
+  ```
+  docker pull harisree06/stocksapi
+  docker run -p 8080:8080 harisree06/stocksapi
+  
+  ```
+  
   
   
 Once application is checked out and running access the app URL using swagger UI or RESTClient
 - Swagger Url - http://localhost:8080/swagger-ui/index.html
+
+![swagger](https://github.com/webdev-june-2021/notes_images/blob/main/swagger.png?raw=true)
 - To check the DB - http://localhost:8080/h2-console/login.do
 
 Credentials are as follows 
