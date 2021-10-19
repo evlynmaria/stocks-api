@@ -1,13 +1,10 @@
 package com.rbctest.api.stocksapi.v1.entity;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.validation.constraints.NotBlank;
-
 import javax.validation.constraints.NotNull;
 
 import com.opencsv.bean.CsvBindByName;
@@ -38,7 +35,7 @@ public class Stock {
 	@NotBlank(message = "Stock Date is mandatory")
 	@CsvBindByName(column = "date", required = true)
 	private String date;
-	
+
 	@CsvBindByName
 	private String open;
 
@@ -47,10 +44,10 @@ public class Stock {
 
 	@CsvBindByName
 	private String low;
-	
+
 	@CsvBindByName
 	private String close;
-	
+
 	@CsvBindByName
 	private String volume;
 
