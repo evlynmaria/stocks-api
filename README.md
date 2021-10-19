@@ -1,6 +1,6 @@
 # stocks-api
 
-An API to load stock info and retrive stock information . The app is inspired from a collection of records from the [Dow Jones Index from 2011](http://archive.ics.uci.edu/ml/datasets/Dow+Jones+Index#). By default the CSV file is loaded at the start of the application. Users of the service could as well enter new stock information. Duplicate stock information is not allowed in the app. Also stock info for a future date is prevented from creating.
+An API to load stock info and retrive stock information . The app is inspired from a collection of records from the [Dow Jones Index from 2011](http://archive.ics.uci.edu/ml/datasets/Dow+Jones+Index#). By default the CSV file is loaded at the start of the application. Users of the service could as well enter new stock information individually or via CSV upload. Duplicate stock information is not allowed in the app. Also stock info for a future date is prevented from creating.
 
 
 ## Technologies used 
