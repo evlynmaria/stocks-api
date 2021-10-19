@@ -11,12 +11,12 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
+
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.junit.platform.runner.JUnitPlatform;
+
 
 
 import com.rbctest.api.stocksapi.v1.entity.Stock;
@@ -24,7 +24,6 @@ import com.rbctest.api.stocksapi.v1.repository.StockRepository;
 import com.rbctest.api.stocksapi.v1.service.StockService;
 
 @ExtendWith(MockitoExtension.class)
-@RunWith(JUnitPlatform.class)
 public class StockServiceTest {
 	
 	 @Mock

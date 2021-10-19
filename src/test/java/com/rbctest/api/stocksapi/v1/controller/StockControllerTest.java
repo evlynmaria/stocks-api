@@ -11,7 +11,6 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -20,14 +19,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.junit.platform.runner.JUnitPlatform;
+
 
 
 import com.rbctest.api.stocksapi.v1.entity.Stock;
 import com.rbctest.api.stocksapi.v1.service.StockService;
 
 @ExtendWith(MockitoExtension.class)
-@RunWith(JUnitPlatform.class)
 public class StockControllerTest {
 	
 	 	@InjectMocks
