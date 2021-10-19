@@ -19,8 +19,16 @@ An API to load stock info and retrive stock information . The app is inspired fr
 - Using Docker
   
   
-Once application is checked out access the app URL using swagger UI or RESTClient
+Once application is checked out and running access the app URL using swagger UI or RESTClient
 - Swagger Url - http://localhost:8080/swagger-ui/index.html
+- To check the DB - http://localhost:8080/h2-console/login.do
+
+Credentials are as follows 
+url=jdbc:h2:mem:stockInfodb
+driverClassName=org.h2.Driver
+username=rbc_user
+password=rbc_password
+
 
 ## Current Features
 
