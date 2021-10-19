@@ -1,13 +1,13 @@
 package com.rbctest.api.stocksapi.v1.entity;
 
-import java.math.BigDecimal;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+
 import javax.validation.constraints.NotNull;
 
 import com.opencsv.bean.CsvBindByName;
