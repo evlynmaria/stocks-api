@@ -40,12 +40,12 @@ public class StockService {
 	public void createNewStock(Stock stock) throws DuplicateEntry, InvalidDateEntry {
 		if (!validateDate(stock.getDate())) {
 			log.error("Date entered is a future date for:" + stock.getStock() + "date given : " + stock.getDate());
-			throw new InvalidDateEntry("Date entered is a future date for:" + stock.getStock() + "date given : " + stock.getDate());
+			throw new InvalidDateEntry("Date entered is a future date for: " + stock.getStock() + " date given : " + stock.getDate());
 			}
 		
 		if (checkForDuplicates(new StockId(stock.getStock(), stock.getDate()))) {
 			log.error("Duplcate Record for :" + stock.getStock() + "on " + stock.getDate());
-			throw new DuplicateEntry("Duplcate Record for :" + stock.getStock() + "on " + stock.getDate());
+			throw new DuplicateEntry("Duplcate Record for : " + stock.getStock() + " on " + stock.getDate());
 		}
 
 		stockRepo.save(stock);
@@ -64,6 +64,12 @@ public class StockService {
 		}
 		Date currentDate = new Date();
 		return enteredDate.before(currentDate);
+	}
+	
+	public boolean validateStock(Stock stock) {
+		return !stock.getDate().isEmpty() || !stock.getStock().isEmpty() || 
+				validateDate(stock.getDate()) || 
+				!checkForDuplicates(new StockId(stock.getStock(), stock.getDate()));
 	}
 
 	public boolean checkForDuplicates(StockId stock_key) {

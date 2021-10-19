@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.rbctest.api.stocksapi.Constants;
+import com.rbctest.api.stocksapi.util.Constants;
 import com.rbctest.api.stocksapi.v1.entity.Stock;
 
 import com.rbctest.api.stocksapi.v1.service.StockService;
@@ -58,7 +58,7 @@ public class CSVFileHelper {
 
 	
 	public static List<Stock> removeInvalidStock(List<Stock> stockList){
-		stockList.stream().filter( stock -> !stock.getDate().isEmpty() || !stock.getStock().isEmpty() || stockServ.validateDate(stock.getDate()));
+		stockList.stream().filter( stock -> stockServ.validateStock(stock));
 		return stockList;
 	}
 	

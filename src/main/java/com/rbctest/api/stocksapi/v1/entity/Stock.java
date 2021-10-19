@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
-
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -30,12 +30,12 @@ public class Stock {
 	private int quarter;
 
 	@Id
-	@NotNull(message = "Stock Ticker is mandatory")
+	@NotBlank(message = "Stock Ticker is mandatory")
 	@CsvBindByName(column = "stock", required = true)
 	private String stock;
 
 	@Id
-	@NotEmpty(message = "Stock Date is mandatory")
+	@NotBlank(message = "Stock Date is mandatory")
 	@CsvBindByName(column = "date", required = true)
 	private String date;
 	
