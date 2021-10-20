@@ -31,7 +31,7 @@ public class DataLoader {
 	@EventListener(ApplicationReadyEvent.class)
 	public void loadDatafterStartup() {
 		try {
-			Resource fileResource = resourceLoader.getResource("classpath*:" + fileName);
+			Resource fileResource = resourceLoader.getResource("classpath:" + fileName);
 			MultipartFile multipartFile = new MockMultipartFile(fileName, fileResource.getInputStream());
 			fileServ.batchUpload(multipartFile);
 		} catch (IOException e) {

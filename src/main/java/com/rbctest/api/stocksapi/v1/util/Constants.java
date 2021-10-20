@@ -1,4 +1,4 @@
-package com.rbctest.api.stocksapi.util;
+package com.rbctest.api.stocksapi.v1.util;
 
 public final class Constants {
 
