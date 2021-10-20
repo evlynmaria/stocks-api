@@ -232,6 +232,29 @@ If there is matching record response will be HTTP status code 201
 Example 
 
 ```
+// Request body 
+{
+    "quarter": 1,
+    "stock": "AA",
+    "date": "01/07/2020",
+    "open": "$15.82",
+    "high": "$16.72",
+    "low": "$15.78",
+    "close": "$16.42",
+    "volume": 239655616,
+    "percentChangePrice": 3.79267,
+    "percentChangeVolumeOverLastWk": "",
+    "previousWeeksVolume": "",
+    "nextWeeksOpen": 16.71,
+    "nextWeeksClose": 15.97,
+    "percentChangeNextWeeksPrice": -4.42849,
+    "daysToNextDividend": 26,
+    "percentReturnNextDividend": 0.182704
+}
+
+//Repose 
+
+Status code 201 :: Record inserted Successfully
 
 ```
  
