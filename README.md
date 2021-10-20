@@ -34,7 +34,7 @@ An API to load stock info and retrive stock information . The app is inspired fr
   
   
 Once application is checked out and running access the app URL using swagger UI or RESTClient
-- Swagger Url - http://localhost:8080/swagger-ui/index.html
+- Swagger Url - http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
 ![swagger](https://github.com/webdev-june-2021/notes_images/blob/main/swagger.png?raw=true)
 - To check the DB - http://localhost:8080/h2-console/login.do
@@ -228,6 +228,35 @@ If there is matching record response will be HTTP status code 201
  
  -To post info about the stock 
  POST http://localhost:8080/rbc-test/api/v1/stocks
+
+Example 
+
+```
+// Request body 
+{
+    "quarter": 1,
+    "stock": "AA",
+    "date": "01/07/2020",
+    "open": "$15.82",
+    "high": "$16.72",
+    "low": "$15.78",
+    "close": "$16.42",
+    "volume": 239655616,
+    "percentChangePrice": 3.79267,
+    "percentChangeVolumeOverLastWk": "",
+    "previousWeeksVolume": "",
+    "nextWeeksOpen": 16.71,
+    "nextWeeksClose": 15.97,
+    "percentChangeNextWeeksPrice": -4.42849,
+    "daysToNextDividend": 26,
+    "percentReturnNextDividend": 0.182704
+}
+
+//Repose 
+
+Status code 201 :: Record inserted Successfully
+
+```
  
  
  -To upload stock info as a batch 
