@@ -16,7 +16,8 @@ An API to load stock info and retrive stock information . The app is inspired fr
 
 ## Application Setup
 
-- git clone , import the app and run locally
+- To run using editor 
+   git clone , import the app and run locally
 
 - using Docker 
   ```
@@ -24,7 +25,7 @@ An API to load stock info and retrive stock information . The app is inspired fr
   docker build . -t harisree06/stocksapi
   docker run -p 8080:8080 harisree06/stocksapi
   ```
-- From Docker hub (might be broken) 
+- From Docker hub 
   ```
   docker pull harisree06/stocksapi
   docker run -p 8080:8080 harisree06/stocksapi
@@ -39,11 +40,11 @@ Once application is checked out and running access the app URL using swagger UI 
 ![swagger](https://github.com/webdev-june-2021/notes_images/blob/main/swagger.png?raw=true)
 - To check the DB - http://localhost:8080/h2-console/login.do
 
-Credentials are as follows 
-url=jdbc:h2:mem:stockInfodb
-driverClassName=org.h2.Driver
-username=rbc_user
-password=rbc_password
+  1.Credentials are as follows 
+  2.url=jdbc:h2:mem:stockInfodb
+  3.driverClassName=org.h2.Driver
+  4.username=rbc_user
+  5.password=rbc_password
 
 
 ## Current Features
